@@ -1,0 +1,218 @@
+/*Палитра
+цвет теекста заголовка - #FFFFFF;
+цвет теекста подзаголовков - #212121;
+цвет теекста - #757575;
+текст силки при наведении - #2196F3;
+текст в подвале - #FFFFFF; rgba(255, 255, 255, 0.6);
+акцент -  #2196F3;
+*/
+
+:root {
+  --body-color: #ffffff;
+  --text-color: #757575;
+  --title-color: #212121;
+  --hover-color: #2196f3;
+  --dark-bg-color: #2f303a;
+  --dark-bg-text-color: #ffffff;
+  --button-color: #2196f3;
+  --dark-dg-filters-color: #f5f4fa;
+}
+/* Главная */
+body {
+  background: var(--body-color);
+  color: var(--text-color);
+  font-family: Roboto, sans-serif;
+  letter-spacing: 0.03em;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p{
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+}
+.list {
+  list-style: none;
+}
+.container{
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  padding: 0 15px 0 15px;
+  outline: 5px solid tomato;
+}
+/*---------------------------------------------------------------------------------------------------*/
+/*Шапка сторінки (верхня лінія)*/
+/*Логотип*/
+.logo.link {
+  color: var(--title-color);
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+}
+.logo-web {
+  color: var(--hover-color);
+}
+/*Навигацыя*/
+.link {
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
+.menu.list .link {
+  --text-color: #212121;
+}
+.menu .link.current {
+  color: var(--hover-color);
+}
+.link:active,
+.link:hover,
+.link:focus {
+  color: var(--hover-color);
+}
+/*Номер телефона и электронная почта*/
+
+/*---------------------------------------------------------------------------------------------------*/
+/*Унікальний контент сторінки*/
+.section-title {
+  color: var(--title-color);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16; 
+  margin-bottom: 10px;
+}
+.container > .section-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.section-text {
+  color: var(--text-color);
+  font-weight: 400;
+}
+
+/*Шапка*/
+.hero {
+  background: var(--dark-bg-color);
+}
+.hero-title {
+  color: var(--dark-bg-text-color);
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.37;
+  letter-spacing: 0.06em;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+.button {
+  background: var(--button-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  color: var(--dark-bg-text-color);
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.8;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+}
+.button:active,
+.button:hover,
+.button:focus {
+  --button-color: #ffffff;
+  color: var(--hover-color);
+}
+/*Особливість*/
+.items-feature .section-title {
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+.items-feature .section-text {
+  font-size: 14px;
+  line-height: 1.7;
+}
+/*Чим ми займаемося*/
+
+/*Наша команда*/
+.section-subtitle {
+  color: var(--title-color);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.35;
+  text-align: center;
+}
+.items-team .section-text {
+  font-size: 16px;
+  line-height: 1.35;
+  text-align: center;
+}
+
+/*---------------------------------------------------------------------------------------------------*/
+/*Підвал сторінки*/
+.footer {
+  background: var(--dark-bg-color);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+}
+/*Логотип*/
+.footer .logo {
+  color: var(--dark-bg-text-color);
+  margin-bottom: 20px;
+}
+/*Адрес, номер телефона и электронная почта*/
+.adress {
+  color: var(--dark-bg-text-color);
+  font-style: normal;
+  margin-bottom: 9px;
+}
+.contact-footer .link {
+  --text-color: rgba(255, 255, 255, 0.6);
+  font-weight: 400;
+  letter-spacing: 0.03em;
+}
+
+/*---------------------------------------------------------------------------------------------------*/
+/* страница портфолио */
+/* кнопки фильтра */
+.filters-button {
+  background: var(--dark-dg-filters-color);
+  border-radius: 4px;
+  color: var(--title-color);
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+  cursor: pointer;
+}
+.filters-button:active,
+.filters-button:hover,
+.filters-button:focus {
+  background: var(--button-color);
+  color: var(--dark-bg-text-color);
+}
+
+.items-project .section-title {
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  margin-bottom: 4px;
+}
+.items-project .section-text {
+  font-size: 16px;
+  line-height: 1.8;
+}
