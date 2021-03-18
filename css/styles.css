@@ -34,10 +34,10 @@ ul,
 p{
   margin-top: 0;
   margin-bottom: 0;
-  padding: 0;
 }
 .list {
   list-style: none;
+  padding-left: 0;
 }
 .container{
   margin-left: auto;
@@ -48,8 +48,14 @@ p{
 }
 /*---------------------------------------------------------------------------------------------------*/
 /*Шапка сторінки (верхня лінія)*/
+.main-nav{
+  display: flex;
+  align-items: center;
+}
 /*Логотип*/
 .logo.link {
+  margin-right: 93px;
+
   color: var(--title-color);
   font-family: Raleway, sans-serif;
   font-weight: 700;
@@ -68,7 +74,18 @@ p{
   letter-spacing: 0.02em;
   text-decoration: none;
 }
+.menu{
+  display: flex;
+}
+
+.menu .menu-item:not(:last-child){
+  margin-right: 50px;
+}
 .menu.list .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   --text-color: #212121;
 }
 .menu .link.current {
@@ -80,9 +97,22 @@ p{
   color: var(--hover-color);
 }
 /*Номер телефона и электронная почта*/
-
+.contact{
+  display: flex;
+  margin-left: auto;
+}
+.contact .contact-item:not(:last-child){
+  margin-right: 50px;
+}
 /*---------------------------------------------------------------------------------------------------*/
 /*Унікальний контент сторінки*/
+.section .container{
+  padding-top: 95px;
+  padding-bottom: 95px;
+}
+.container.not{
+  padding-top: 0;
+}
 .section-title {
   color: var(--title-color);
   font-weight: 700;
@@ -101,7 +131,7 @@ p{
 
 /*Шапка*/
 .hero {
-  background: var(--dark-bg-color);
+    background: var(--dark-bg-color);
 }
 .hero-title {
   color: var(--dark-bg-text-color);
@@ -135,6 +165,12 @@ p{
   color: var(--hover-color);
 }
 /*Особливість*/
+.items-feature{
+  display: flex;
+}
+.items-feature .list-feature:not(:last-child){
+  margin-right: 30px;
+}
 .items-feature .section-title {
   font-size: 14px;
   line-height: 1.14;
@@ -145,9 +181,28 @@ p{
   line-height: 1.7;
 }
 /*Чим ми займаемося*/
-
+.items-hobbies{
+  display: flex;
+}
+.items-hobbies .list-hobbies:not(:last-child){
+  margin-right: 30px;
+}
 /*Наша команда*/
+.items-team{
+  display: flex;
+}
+.list-team{
+  outline: 5px solid green;
+  padding-bottom: 30px;
+}
+.items-team .list-team:not(:last-child){
+  margin-right: 30px;
+}
+.{
+  margin-bottom: 30px;
+}
 .section-subtitle {
+  margin-bottom: 10px;
   color: var(--title-color);
   font-weight: 500;
   font-size: 16px;
@@ -183,11 +238,28 @@ p{
   --text-color: rgba(255, 255, 255, 0.6);
   font-weight: 400;
   letter-spacing: 0.03em;
+  margin-bottom: 9px;
 }
+.contact-footer a:last-child{
+  margin-bottom: 0;
+}
+
 
 /*---------------------------------------------------------------------------------------------------*/
 /* страница портфолио */
+.main .container{
+  padding-top: 95px;
+  padding-bottom: 95px;
+}
 /* кнопки фильтра */
+.filters{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.filters .item-filters:not(:last-child){
+  margin-right: 8px;
+}
 .filters-button {
   background: var(--dark-dg-filters-color);
   border-radius: 4px;
@@ -205,7 +277,33 @@ p{
   background: var(--button-color);
   color: var(--dark-bg-text-color);
 }
-
+/*Проэкт*/
+.items-project{
+  display: flex;
+  flex-wrap: wrap;
+  /* простой вариант
+  margin-left: -30px;
+  margin-top: -30px;
+  */
+}
+.item{
+  flex-basis: calc((100% - 90px) / 3);
+  /*простой вариант
+  margin-left: 30px;
+  margin-top: 30px;
+  */
+  padding-bottom: 20px;
+  outline: 5px solid green;
+}
+.items-project .item:not(:nth-last-child(-n+3)){
+  margin-bottom: 30px;
+}
+.items-project .item:not(:nth-child(3n)){
+  margin-right: 30px;
+}
+.image{
+  margin-bottom: 20px;
+}
 .items-project .section-title {
   font-size: 18px;
   line-height: 2;
